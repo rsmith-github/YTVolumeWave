@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "icons": {
+        "16": "assets/infinite-loop.png",
+        "32": "assets/infinite-loop.png",
+        "48": "assets/infinite-loop.png",
+        "128": "assets/infinite-loop.png"
+    },
+    "name": "Youtube Volume Wave",
+    "description": "A chrome extension to create a volume wave effect particularly for white noise videos.",
+    "version": "1.0",
+    "action": {
+      "default_popup": "hello.html",
+      "default_icon": "assets/infinite-loop.png"
+    },
+    "permissions": ["storage", "tabs"],
+    "host_permissions": ["https://*.youtube.com/*"],
+    "background": {
+      "service_worker": "background_script.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://*.youtube.com/*"],
+        "js": ["index.js"]
+      }
+    ],
+    "web_accessible_resources": [
+        {
+          "resources": [
+            "assets/infinite-loop.png"
+          ],
+          "matches": ["https://*.youtube.com/*"]
+        }
+      ]
+  }
+  
