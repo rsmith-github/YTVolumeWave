@@ -1,0 +1,46 @@
+html {
+    height: 150px;
+    width: 200px;
+    background-color: white;
+}
+
+body {
+    margin-top: 0px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#wave {
+    position: absolute;
+    height: 70px;
+    width: 600px;
+    background: #3176dd;
+    z-index: -1;
+  }
+  
+  #wave:before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 340px;
+    height: 80px;
+    background-color: white;
+    right: -5px;
+    top: 40px;
+  }
+  
+  #wave:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 300px;
+    height: 70px;
+    background-color: #3176dd;
+    left: 0;
+    top: 27px;
+  }
+  
